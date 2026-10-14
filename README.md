@@ -10,4 +10,14 @@ Or download `Klipp-<version>.dmg` from [Releases](https://github.com/jannejava/h
 
 First capture: macOS asks for Screen Recording permission. Allow Klipp under System Settings > Privacy & Security > Screen & System Audio Recording.
 
+## Default hotkeys
+
+| Action | Keys |
+|---|---|
+| Capture area | Option+Shift+1 |
+| Capture fullscreen | Option+Shift+3 |
+| Record area | Option+Shift+4 |
+
+Change them in Settings from the menu bar menu.
+
 Issues and pull requests are not accepted here.
