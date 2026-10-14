@@ -1,6 +1,6 @@
 cask "klipp" do
-  version "1.0.0"
-  sha256 "REPLACE_WITH_SHA256_FROM_PACKAGE_SH"
+  version "1.0"
+  sha256 "4aed198440fb23850fde710e4f6e328fb4a26272c108abf1ab7e312b51b29a39"
 
   url "https://github.com/jannejava/Klipp/releases/download/v#{version}/Klipp-#{version}.dmg"
   name "Klipp"
