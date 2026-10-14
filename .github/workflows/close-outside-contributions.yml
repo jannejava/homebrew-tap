@@ -1,0 +1,26 @@
+# Klipp does not take outside issues or pull requests. Anything not opened by the
+# repository owner is closed with a short note.
+name: Close outside contributions
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  close:
+    if: github.actor != github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
+          KIND: ${{ github.event_name == 'issues' && 'issue' || 'pr' }}
+        run: |
+          gh "$KIND" comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body "Thanks for the interest. Klipp is a personal project and does not take outside issues or pull requests, so this is closed automatically."
+          gh "$KIND" close "$NUMBER" --repo "$GITHUB_REPOSITORY"
