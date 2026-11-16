@@ -1,6 +1,6 @@
 cask "klipp" do
-  version "1.1.1"
-  sha256 "345d8f135985b0bc0c16427546601a7bb99cab61d10fba52989a645d5a5ebce9"
+  version "1.2.0"
+  sha256 "5a2a56310fd4c3fd18bc2dbaf2b9eb4ff9bbd25d18444b427dbaae45a7fc0093"
 
   url "https://github.com/jannejava/homebrew-tap/releases/download/v#{version}/Klipp-#{version}.dmg"
   name "Klipp"
